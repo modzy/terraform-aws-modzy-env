@@ -10,10 +10,10 @@ Create Terraform template file with content as below, insert the variables:
 (Refer to the Modzy <a href="https://docs.modzy.com/docs/aws">Deployment Guide </a>  for full usage/configuration details)
 
 ```shell
-module "modzy" {
-  source  = "terraform-modzy-modules/aws/modzy"
+module "modzy-env" {
+  source  = "modzy/modzy-env/aws"
   version = "1.0.0"
-  # insert input variables here
+  # insert (required) variables here
 }
 ```
 
