@@ -13,7 +13,7 @@ Create Terraform template file with content as below, insert the variables:
 module "modzy-env" {
   source  = "modzy/modzy-env/aws"
   version = "1.0.0"
-  # insert (required) variables here
+  # insert (required) input variables here
 }
 ```
 
