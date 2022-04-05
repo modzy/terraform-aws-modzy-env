@@ -112,6 +112,18 @@ variable "cluster_autoscaler_serviceaccount_name" {
   default = "cluster-autoscaler"
 }
 
+variable "cluster_endpoint_public_access" {
+  description = "Indicates whether or not the EKS public API server endpoint is enabled"
+  type = bool
+  default = false
+}
+
+variable "cluster_endpoint_public_access_cidrs" {
+  description = "List of CIDR blocks which can access to the EKS cluster public API endpoint"
+  type = list(string)
+  default = ["0.0.0.0/0"]
+}
+
 variable "db_instance_type" {
   description = "RDS database class"
   type = string

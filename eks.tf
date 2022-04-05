@@ -1,11 +1,14 @@
 module "eks" {
-  source = "git::https://github.com/modzy/terraform-aws-modzy-eks.git?ref=v1.0.0"
+  source = "git::https://github.com/modzy/terraform-aws-modzy-eks.git?ref=v1.0.1"
 
   aws_region = var.aws_region
   aws_profile = var.aws_profile
 
   cluster_name = local.identifier_prefix
   k8s_version = var.k8s_version
+
+  cluster_endpoint_public_access = var.cluster_endpoint_public_access
+  cluster_endpoint_public_access_cidrs = var.cluster_endpoint_public_access_cidrs
 
   management_cidrs = var.management_cidrs
   admin_role_arn = var.admin_role_arn

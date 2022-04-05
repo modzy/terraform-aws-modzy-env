@@ -91,10 +91,3 @@ resource "aws_security_group" "db_access" {
     )
   }
 }
-
-# Enable the `uuid-ossp` extension.
-resource "postgresql_extension" "uuid_ossp" {
-  depends_on = [aws_db_instance.modzy]
-  name = "uuid-ossp"
-  database = aws_db_instance.modzy.name
-}
